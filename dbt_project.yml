@@ -36,3 +36,11 @@ models:
     staging:
       +materialized: view
       +dataset: "staging"
+    intermediate:
+      +materialized: ephemeral
+    datawarehouse:
+      +dataset: "dwh"
+      +materialized: table
+
+seeds:
+  dataset: "seed"

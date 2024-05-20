@@ -1,0 +1,8 @@
+version: 2
+
+models:
+  - name: fct__trips
+    description: "{{ doc('fct__trips') }}"
+    columns:
+      - name: _partition_date
+        description: "{{ doc('_p_date') }}"

@@ -7,12 +7,13 @@ source_trips as (
 
 casted as (
     select
-
-         cast(hvfhs_license_num as string) as hvfhs_license_num
+         cast(request_datetime as date) as _p_date
+        ,cast(hvfhs_license_num as string) as hvfhs_license_num
         ,cast(dispatching_base_num as string) as dispatching_base_num
         ,cast(originating_base_num as string) as originating_base_num
 
         ,cast(request_datetime as timestamp) as request_datetime
+        ,cast(request_datetime as date) as request_date
         ,cast(on_scene_datetime as timestamp) as on_scene_datetime
         ,cast(pickup_datetime as timestamp) as pickup_datetime
         ,cast(dropoff_datetime as timestamp) as dropoff_datetime
@@ -91,4 +92,4 @@ with_pk as (
 )
 
 select *
-from casted
+from with_pk

@@ -3,21 +3,23 @@ version: 2
 
 models:
   - name: staging_trips
-    description: "Staging view for trips source data"
+    description: "{{ doc('staging_trips') }}"
     columns:
+      - name: _p_date
+        description: "{{ doc('_p_date') }}"
       - name: hvfhs_license_num
-        description: "Hvfhs license number. Identifier of the vehicle"
+        description: "{{ doc('hvfhs_license_num') }}"
         tests:
           - not_null
 
       - name: dispatching_base_num
-        description: "Base number of the trip dispatch"
+        description: "The TLC Base License Number of the base that dispatched the trip"
 
       - name: originating_base_num
-        description: "Base number of the trip origin"
+        description: "base number of the base that received the original trip request"
 
       - name: request_datetime
-        description: "Timestamp when the trip was requested"
+        description: "date/time when passenger requested to be picked up"
 
       - name: trip_key
         description: '{{ doc("trip_key") }}'
