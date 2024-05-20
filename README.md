@@ -45,12 +45,16 @@ Following must be done to run this project:
 ### Virtual environment
 Setup the python virtual environment using the requirements file. Ie
 `pip install -r requirements.txt`
-### Packages
+### Test and run
 Install the dbt packages, test and run
 
 - `dbt deps`
 - `dbt debug`
 - `dbt build`
+
+### Docs
+- `dbt docs generate`
+- `dbt docs serve`
 
 ### Resources:
 - Learn more about dbt [in the docs](https://docs.getdbt.com/docs/introduction)

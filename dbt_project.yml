@@ -41,6 +41,9 @@ models:
     datawarehouse:
       +dataset: "dwh"
       +materialized: table
+    datamart:
+      +dataset: "dm"
+      +materialized: view
 
 seeds:
   dataset: "seed"

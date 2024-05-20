@@ -1,0 +1,10 @@
+version: 2
+
+models:
+  - name: dm__trip_locations_aggregated_metrics
+    description: "A datamart view that aggregates the trip metrics per calendar month and pick-up location"
+    columns:
+      - name: pulocationid
+        description: "TLC Taxi Zone in which the trip began"
+        tests:
+          - not_null

@@ -6,3 +6,5 @@ models:
     columns:
       - name: _partition_date
         description: "{{ doc('_p_date') }}"
+      - name: total_cost_to_passenger
+        description: "{{ doc('total_cost_to_passenger') }}"
