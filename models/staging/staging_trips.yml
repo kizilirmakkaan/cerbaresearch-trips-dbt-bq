@@ -1,0 +1,28 @@
+
+version: 2
+
+models:
+  - name: staging_trips
+    description: "Staging view for trips source data"
+    columns:
+      - name: hvfhs_license_num
+        description: "Hvfhs license number. Identifier of the vehicle"
+        tests:
+          - not_null
+
+      - name: dispatching_base_num
+        description: "Base number of the trip dispatch"
+
+      - name: originating_base_num
+        description: "Base number of the trip origin"
+
+      - name: request_datetime
+        description: "Timestamp when the trip was requested"
+
+      - name: trip_key
+        description: '{{ doc("trip_key") }}'
+        tests:
+          - not_null
+          - unique
+
+# Continue for all the fields

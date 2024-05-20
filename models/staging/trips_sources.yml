@@ -1,0 +1,6 @@
+sources:
+  - name: cerbaresearch
+    database: sbx-kaan-kizilirmak
+    tables:
+      - name: tripdata_2024_01
+        description: "External source data located in GCS budget."
